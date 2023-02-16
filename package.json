@@ -1,5 +1,5 @@
 {
-  "name": "unit-test",
+  "name": "unit-test-logging",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,5 +18,8 @@
     "@babel/preset-env": "^7.20.2",
     "babel-jest": "^29.4.3",
     "jest": "^29.4.3"
+  },
+  "dependencies": {
+    "winston": "^3.8.2"
   }
 }
