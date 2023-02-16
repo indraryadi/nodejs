@@ -1,5 +1,7 @@
-#### step instalation jest
+#### step instalation jes
+
 - npm install jest --save-dev
+
 #### edit package.json file
 - "scripts": {
     "test": "jest"
