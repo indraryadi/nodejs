@@ -1,4 +1,4 @@
-#### step instalation jes
+#### step instalation jest
 
 ``` 
 npm install jest --save-dev
