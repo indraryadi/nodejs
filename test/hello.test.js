@@ -44,6 +44,14 @@ app.get('/setResponseHeader',(req,res)=>{
     }).end()
 })
 
+app.get('/responseBody',(req,res)=>{
+    res.set({
+        // 'Content-type':'application/json'
+        'Content-type':'text/html'
+    })
+    res.send('Kira')
+})
+
 test("Test Hello function",async ()=>{
     const response = await request(app).get('/')
     expect(response.text).toBe('hello')
@@ -90,4 +98,12 @@ test("Test Set Response Header",async ()=>{
     const response = await request(app).get('/setResponseHeader')
     expect(response.get('X-Powered-By')).toEqual('New SE')
     expect(response.get('X-Author')).toEqual('Kira')
+})
+
+test("Test Response Body",async ()=>{
+    const response = await request(app).get('/responseBody')
+
+    // expect(response.get('Content-type')).toContain('application/json')
+    expect(response.get('Content-type')).toContain('text/html')
+    expect(response.text).toBe('Kira')
 })
